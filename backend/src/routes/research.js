@@ -1,142 +1,382 @@
 const researchData = {
-  '计算机科学': [
+  'Computer Science': [
     {
-      title: '基于机器学习的图像识别系统',
-      description: '开发一个使用深度学习算法识别图像中物体的系统，可以应用于自动驾驶、安防监控等领域。',
-      requiredSkills: ['Python编程', 'TensorFlow/PyTorch框架', '神经网络原理', '数据处理'],
-      expectedOutcomes: '完成一个可运行的图像识别模型，并提交技术报告',
-      timeline: '3-6个月：1-2个月学习基础，2-3个月开发，1个月优化'
+      title: 'Machine Learning Image Recognition System',
+      description: 'Develop an image recognition system using deep learning algorithms to identify objects in images, applicable to autonomous driving, security monitoring, and other fields.',
+      requiredSkills: ['Python Programming', 'TensorFlow/PyTorch', 'Neural Networks', 'Data Processing'],
+      expectedOutcomes: 'Complete a working image recognition model with technical report',
+      timeline: '3-6 months: 1-2 months learning, 2-3 months development, 1 month optimization'
     },
     {
-      title: '区块链应用开发',
-      description: '设计并实现一个基于区块链的去中心化应用(DApp)，可以用于供应链追踪、数字资产管理等场景。',
-      requiredSkills: ['Solidity智能合约', 'Web3开发', '以太坊框架', '密码学基础'],
-      expectedOutcomes: '完成一个可部署的智能合约和前端界面',
-      timeline: '4-8个月：2个月学习，3个月开发，3个月测试优化'
+      title: 'Blockchain Application Development',
+      description: 'Design and implement a decentralized application (DApp) based on blockchain technology for supply chain tracking, digital asset management, and other scenarios.',
+      requiredSkills: ['Solidity Smart Contracts', 'Web3 Development', 'Ethereum Framework', 'Cryptography Basics'],
+      expectedOutcomes: 'Complete deployable smart contracts and frontend interface',
+      timeline: '4-8 months: 2 months learning, 3 months development, 3 months testing'
     },
     {
-      title: '自然语言处理聊天机器人',
-      description: '构建一个能够理解自然语言并进行智能对话的聊天机器人，可用于客服、教育辅助等场景。',
-      requiredSkills: ['NLP算法', 'Python', 'Transformers库', '对话系统设计'],
-      expectedOutcomes: '实现一个具备上下文理解能力的聊天机器人',
-      timeline: '3-6个月'
+      title: 'Natural Language Processing Chatbot',
+      description: 'Build a chatbot capable of understanding natural language and engaging in intelligent conversations, applicable to customer service and educational assistance.',
+      requiredSkills: ['NLP Algorithms', 'Python', 'Transformers Library', 'Dialogue System Design'],
+      expectedOutcomes: 'Implement a chatbot with context understanding capabilities',
+      timeline: '3-6 months'
     },
     {
-      title: '移动应用开发项目',
-      description: '开发一款面向特定用户群体的移动应用，解决实际生活中的问题，如健康管理、学习工具等。',
-      requiredSkills: ['React Native/Flutter', 'UI/UX设计', 'API开发', '版本控制'],
-      expectedOutcomes: '完成一款可在App Store/Google Play上架的应用',
-      timeline: '4-8个月'
+      title: 'Mobile Application Development',
+      description: 'Develop a mobile application for a specific user group to solve real-life problems such as health management or learning tools.',
+      requiredSkills: ['React Native/Flutter', 'UI/UX Design', 'API Development', 'Version Control'],
+      expectedOutcomes: 'Complete an app available on App Store/Google Play',
+      timeline: '4-8 months'
     }
   ],
-  '生物学': [
+  'Biology': [
     {
-      title: '基因编辑技术研究',
-      description: '学习CRISPR-Cas9基因编辑技术的基础知识，设计针对特定基因的编辑方案。',
-      requiredSkills: ['分子生物学', '基因工程', '实验操作', '数据分析'],
-      expectedOutcomes: '完成实验方案设计和数据分析报告',
-      timeline: '6-12个月'
+      title: 'Gene Editing Technology Research',
+      description: 'Learn the fundamentals of CRISPR-Cas9 gene editing technology and design gene editing solutions for specific genes.',
+      requiredSkills: ['Molecular Biology', 'Genetic Engineering', 'Lab Operations', 'Data Analysis'],
+      expectedOutcomes: 'Complete experimental design and data analysis report',
+      timeline: '6-12 months'
     },
     {
-      title: '生态环境调查研究',
-      description: '对特定区域的生态环境进行调查研究，分析生物多样性和环境因素的关系。',
-      requiredSkills: ['生态学', '统计学', '野外调查方法', 'GIS技术'],
-      expectedOutcomes: '提交生态环境调查报告和建议方案',
-      timeline: '6-12个月'
+      title: 'Ecological Environment Investigation',
+      description: 'Investigate the ecological environment of a specific region and analyze the relationship between biodiversity and environmental factors.',
+      requiredSkills: ['Ecology', 'Statistics', 'Field Survey Methods', 'GIS Technology'],
+      expectedOutcomes: 'Submit ecological investigation report and recommendations',
+      timeline: '6-12 months'
     },
     {
-      title: '生物信息学数据分析',
-      description: '利用生物信息学工具分析基因组数据，发现潜在的基因变异和疾病关联。',
-      requiredSkills: ['生物信息学', 'R/Python编程', '统计学', '基因组学'],
-      expectedOutcomes: '完成数据分析并撰写研究报告',
-      timeline: '4-8个月'
+      title: 'Bioinformatics Data Analysis',
+      description: 'Use bioinformatics tools to analyze genomic data and discover potential gene variations and disease associations.',
+      requiredSkills: ['Bioinformatics', 'R/Python Programming', 'Statistics', 'Genomics'],
+      expectedOutcomes: 'Complete data analysis and research report',
+      timeline: '4-8 months'
     },
     {
-      title: '药物研发模拟',
-      description: '学习计算机辅助药物设计方法，模拟小分子与靶蛋白的相互作用。',
-      requiredSkills: ['药物化学', '分子对接', '分子动力学', '计算化学软件'],
-      expectedOutcomes: '完成药物筛选模拟报告',
-      timeline: '4-8个月'
+      title: 'Drug Development Simulation',
+      description: 'Learn computer-aided drug design methods and simulate interactions between small molecules and target proteins.',
+      requiredSkills: ['Medicinal Chemistry', 'Molecular Docking', 'Molecular Dynamics', 'Computational Chemistry Software'],
+      expectedOutcomes: 'Complete drug screening simulation report',
+      timeline: '4-8 months'
     }
   ],
-  '经济学': [
+  'Economics': [
     {
-      title: '宏观经济数据分析',
-      description: '收集并分析宏观经济数据，研究经济周期、通货膨胀等经济现象。',
-      requiredSkills: ['计量经济学', 'R/Stata', '经济理论', '数据可视化'],
-      expectedOutcomes: '完成经济分析报告和数据可视化作品',
-      timeline: '3-6个月'
+      title: 'Macroeconomic Data Analysis',
+      description: 'Collect and analyze macroeconomic data to study economic cycles, inflation, and other economic phenomena.',
+      requiredSkills: ['Econometrics', 'R/Stata', 'Economic Theory', 'Data Visualization'],
+      expectedOutcomes: 'Complete economic analysis report and data visualization',
+      timeline: '3-6 months'
     },
     {
-      title: '行为经济学实验',
-      description: '设计并实施行为经济学实验，研究人们的决策行为和经济偏好。',
-      requiredSkills: ['行为经济学', '实验设计', '统计学', '问卷调查'],
-      expectedOutcomes: '完成实验报告和学术论文',
-      timeline: '4-8个月'
+      title: 'Behavioral Economics Experiment',
+      description: 'Design and implement behavioral economics experiments to study peoples decision-making behavior and economic preferences.',
+      requiredSkills: ['Behavioral Economics', 'Experimental Design', 'Statistics', 'Questionnaire Survey'],
+      expectedOutcomes: 'Complete experiment report and academic paper',
+      timeline: '4-8 months'
     },
     {
-      title: '金融建模项目',
-      description: '建立金融模型进行投资组合优化、风险评估或市场预测。',
-      requiredSkills: ['金融学', 'Python/MATLAB', '时间序列分析', '机器学习'],
-      expectedOutcomes: '完成可演示的金融模型',
-      timeline: '4-8个月'
+      title: 'Financial Modeling Project',
+      description: 'Build financial models for investment portfolio optimization, risk assessment, or market prediction.',
+      requiredSkills: ['Finance', 'Python/MATLAB', 'Time Series Analysis', 'Machine Learning'],
+      expectedOutcomes: 'Complete a demonstrable financial model',
+      timeline: '4-8 months'
     },
     {
-      title: '产业竞争力研究',
-      description: '分析特定产业的竞争优势和发展趋势，提出战略建议。',
-      requiredSkills: ['产业经济学', 'PEST/SWOT分析', '案例研究', '报告撰写'],
-      expectedOutcomes: '完成产业分析报告',
-      timeline: '3-6个月'
+      title: 'Industry Competitiveness Research',
+      description: 'Analyze the competitive advantages and development trends of specific industries and propose strategic recommendations.',
+      requiredSkills: ['Industrial Economics', 'PEST/SWOT Analysis', 'Case Study', 'Report Writing'],
+      expectedOutcomes: 'Complete industry analysis report',
+      timeline: '3-6 months'
+    }
+  ],
+  'Physics': [
+    {
+      title: 'Quantum Computing Research',
+      description: 'Study quantum computing fundamentals and explore quantum algorithms for solving complex problems.',
+      requiredSkills: ['Quantum Mechanics', 'Linear Algebra', 'Programming', 'Quantum Information Theory'],
+      expectedOutcomes: 'Complete research report on quantum computing applications',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Astrophysics Project',
+      description: 'Analyze astronomical data and study celestial phenomena such as black holes, dark matter, and cosmic evolution.',
+      requiredSkills: ['Astrophysics', 'Data Analysis', 'Telescope Operations', 'Astronomical Software'],
+      expectedOutcomes: 'Complete astrophysics research report',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Condensed Matter Physics Research',
+      description: 'Study the physical properties of condensed matter systems and explore new materials.',
+      requiredSkills: ['Solid State Physics', 'Materials Science', 'Experimental Techniques', 'Data Analysis'],
+      expectedOutcomes: 'Complete research on material properties',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Particle Physics Experiment',
+      description: 'Participate in particle physics experiments and analyze data from high-energy physics experiments.',
+      requiredSkills: ['Particle Physics', 'Data Analysis', 'Programming', 'Detector Technology'],
+      expectedOutcomes: 'Complete particle physics analysis report',
+      timeline: '6-12 months'
+    }
+  ],
+  'Chemistry': [
+    {
+      title: 'Organic Synthesis Project',
+      description: 'Design and synthesize novel organic compounds with potential applications in pharmaceuticals or materials.',
+      requiredSkills: ['Organic Chemistry', 'Synthesis Techniques', 'Spectroscopy', 'Lab Safety'],
+      expectedOutcomes: 'Complete synthesis of target compounds with analysis',
+      timeline: '4-8 months'
+    },
+    {
+      title: 'Materials Chemistry Research',
+      description: 'Develop new functional materials for energy storage, catalysis, or electronics applications.',
+      requiredSkills: ['Materials Chemistry', 'Characterization Methods', 'Synthesis', 'Data Analysis'],
+      expectedOutcomes: 'Complete materials development and characterization',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Environmental Chemistry Study',
+      description: 'Study environmental pollutants and develop methods for water or soil remediation.',
+      requiredSkills: ['Environmental Chemistry', 'Analytical Chemistry', 'Sample Processing', 'Toxicology'],
+      expectedOutcomes: 'Complete environmental analysis report',
+      timeline: '4-8 months'
+    },
+    {
+      title: 'Computational Chemistry Project',
+      description: 'Use computational methods to simulate molecular structures and reactions.',
+      requiredSkills: ['Computational Chemistry', 'Molecular Modeling', 'Programming', 'Quantum Chemistry'],
+      expectedOutcomes: 'Complete molecular simulation and analysis',
+      timeline: '4-8 months'
+    }
+  ],
+  'Mathematics': [
+    {
+      title: 'Cryptography Research',
+      description: 'Study cryptographic algorithms and their applications in information security.',
+      requiredSkills: ['Number Theory', 'Abstract Algebra', 'Cryptography', 'Programming'],
+      expectedOutcomes: 'Implement cryptographic algorithms and security analysis',
+      timeline: '4-8 months'
+    },
+    {
+      title: 'Data Science Project',
+      description: 'Apply mathematical and statistical methods to analyze large datasets and extract insights.',
+      requiredSkills: ['Statistics', 'Machine Learning', 'Python/R', 'Data Visualization'],
+      expectedOutcomes: 'Complete data analysis project with actionable insights',
+      timeline: '4-8 months'
+    },
+    {
+      title: 'Financial Mathematics Study',
+      description: 'Apply mathematical models to financial markets for pricing derivatives and risk management.',
+      requiredSkills: ['Stochastic Processes', 'Financial Mathematics', 'Programming', 'Risk Analysis'],
+      expectedOutcomes: 'Complete quantitative finance model',
+      timeline: '4-8 months'
+    },
+    {
+      title: 'Optimization Theory Research',
+      description: 'Study optimization algorithms and their applications in various fields.',
+      requiredSkills: ['Optimization Theory', 'Algorithms', 'Programming', 'Mathematical Modeling'],
+      expectedOutcomes: 'Complete optimization algorithm development',
+      timeline: '4-8 months'
+    }
+  ],
+  'Engineering': [
+    {
+      title: 'Robotics Project',
+      description: 'Design and build a robotic system for specific applications such as exploration or assistance.',
+      requiredSkills: ['Mechanical Design', 'Electronics', 'Programming', 'Control Systems'],
+      expectedOutcomes: 'Complete working robotic prototype',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Sustainable Energy Research',
+      description: 'Develop renewable energy solutions such as solar cells or energy storage systems.',
+      requiredSkills: ['Energy Engineering', 'Materials Science', 'System Design', 'Testing'],
+      expectedOutcomes: 'Complete energy system prototype with analysis',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Smart City Project',
+      description: 'Design IoT systems for smart city applications including traffic, energy, or security.',
+      requiredSkills: ['IoT Technology', 'Sensor Networks', 'Data Analytics', 'System Integration'],
+      expectedOutcomes: 'Complete IoT system demonstration',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Aerospace Engineering Study',
+      description: 'Study aircraft or spacecraft design principles and perform aerodynamic analysis.',
+      requiredSkills: ['Aerodynamics', 'Structural Analysis', 'Flight Mechanics', 'CAD Design'],
+      expectedOutcomes: 'Complete aerospace design project with analysis',
+      timeline: '6-12 months'
+    }
+  ],
+  'Psychology': [
+    {
+      title: 'Cognitive Neuroscience Research',
+      description: 'Study brain-behavior relationships using neuroscience methods and cognitive experiments.',
+      requiredSkills: ['Neuroscience', 'Cognitive Psychology', 'Data Analysis', 'Research Methods'],
+      expectedOutcomes: 'Complete cognitive neuroscience research report',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'User Experience Study',
+      description: 'Conduct UX research to understand user behavior and improve product design.',
+      requiredSkills: ['UX Research', 'Interview Techniques', 'Data Analysis', 'Prototyping'],
+      expectedOutcomes: 'Complete UX research report with recommendations',
+      timeline: '4-8 months'
+    },
+    {
+      title: 'Mental Health Research',
+      description: 'Study mental health issues and develop intervention strategies.',
+      requiredSkills: ['Clinical Psychology', 'Assessment Methods', 'Statistics', 'Ethics'],
+      expectedOutcomes: 'Complete mental health research report',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Social Psychology Experiment',
+      description: 'Design and conduct experiments on social behavior and group dynamics.',
+      requiredSkills: ['Social Psychology', 'Experimental Design', 'Statistics', 'Report Writing'],
+      expectedOutcomes: 'Complete social psychology experiment report',
+      timeline: '4-8 months'
+    }
+  ],
+  'Medicine': [
+    {
+      title: 'Medical Imaging Analysis',
+      description: 'Develop AI algorithms for analyzing medical images such as X-rays, MRI, or CT scans.',
+      requiredSkills: ['Medical Imaging', 'Deep Learning', 'Python', 'Healthcare Data'],
+      expectedOutcomes: 'Complete medical image analysis system',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Drug Response Study',
+      description: 'Study drug responses and develop personalized medicine approaches.',
+      requiredSkills: ['Pharmacology', 'Biostatistics', 'Genomics', 'Data Analysis'],
+      expectedOutcomes: 'Complete drug response analysis report',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Public Health Research',
+      description: 'Study public health issues and develop intervention strategies for community health.',
+      requiredSkills: ['Epidemiology', 'Biostatistics', 'Health Policy', 'Survey Methods'],
+      expectedOutcomes: 'Complete public health research report',
+      timeline: '6-12 months'
+    },
+    {
+      title: 'Regenerative Medicine Study',
+      description: 'Study stem cell therapy and tissue engineering for regenerative medicine.',
+      requiredSkills: ['Cell Biology', 'Tissue Engineering', 'Lab Techniques', 'Biomaterials'],
+      expectedOutcomes: 'Complete regenerative medicine research report',
+      timeline: '6-12 months'
     }
   ],
   'default': [
     {
-      title: '跨学科创新研究项目',
-      description: '结合多个学科领域知识，解决一个现实世界的问题。',
-      requiredSkills: ['跨学科思维', '研究方法', '创新思维', '项目管理'],
-      expectedOutcomes: '完成项目报告和成果展示',
-      timeline: '6-12个月'
+      title: 'Interdisciplinary Innovation Project',
+      description: 'Combine knowledge from multiple disciplines to solve real-world problems.',
+      requiredSkills: ['Interdisciplinary Thinking', 'Research Methods', 'Innovation', 'Project Management'],
+      expectedOutcomes: 'Complete project report and presentation',
+      timeline: '6-12 months'
     },
     {
-      title: '社会调研项目',
-      description: '针对社会问题进行深入调研，提出解决方案。',
-      requiredSkills: ['调研方法', '数据分析', '报告撰写', '公众演讲'],
-      expectedOutcomes: '完成调研报告',
-      timeline: '4-8个月'
+      title: 'Social Research Project',
+      description: 'Conduct in-depth research on social issues and propose solutions.',
+      requiredSkills: ['Research Methods', 'Data Analysis', 'Report Writing', 'Public Speaking'],
+      expectedOutcomes: 'Complete research report',
+      timeline: '4-8 months'
     },
     {
-      title: '技术创新项目',
-      description: '运用技术创新解决实际问题，可以是软件开发、硬件设计等。',
-      requiredSkills: ['技术开发能力', '项目管理', '团队协作', '文档撰写'],
-      expectedOutcomes: '完成可运行的技术产品',
-      timeline: '6-12个月'
+      title: 'Technology Innovation Project',
+      description: 'Apply technological innovation to solve practical problems through software or hardware development.',
+      requiredSkills: ['Technical Development', 'Project Management', 'Teamwork', 'Documentation'],
+      expectedOutcomes: 'Complete working technical product',
+      timeline: '6-12 months'
     },
     {
-      title: '学术研究入门',
-      description: '跟随导师参与学术研究项目，学习科研方法和学术写作。',
-      requiredSkills: ['文献检索', '学术写作', '实验技能', '批判性思维'],
-      expectedOutcomes: '完成研究总结或论文初稿',
-      timeline: '6-12个月'
+      title: 'Academic Research Introduction',
+      description: 'Participate in academic research projects under faculty guidance to learn research methods and academic writing.',
+      requiredSkills: ['Literature Review', 'Academic Writing', 'Research Skills', 'Critical Thinking'],
+      expectedOutcomes: 'Complete research summary or draft paper',
+      timeline: '6-12 months'
     }
   ]
+}
+
+const majorMapping = {
+  'Computer Science': 'Computer Science',
+  'Software Engineering': 'Computer Science',
+  'Artificial Intelligence': 'Computer Science',
+  'Data Science': 'Computer Science',
+  'Information Systems': 'Computer Science',
+  'Biology': 'Biology',
+  'Biochemistry': 'Biology',
+  'Genetics': 'Biology',
+  'Microbiology': 'Biology',
+  'Neuroscience': 'Biology',
+  'Economics': 'Economics',
+  'Finance': 'Economics',
+  'Accounting': 'Economics',
+  'Business Administration': 'Economics',
+  'Marketing': 'Economics',
+  'Physics': 'Physics',
+  'Chemistry': 'Chemistry',
+  'Materials Science': 'Chemistry',
+  'Environmental Science': 'Chemistry',
+  'Mathematics': 'Mathematics',
+  'Statistics': 'Mathematics',
+  'Aerospace Engineering': 'Engineering',
+  'Mechanical Engineering': 'Engineering',
+  'Electrical Engineering': 'Engineering',
+  'Chemical Engineering': 'Engineering',
+  'Civil Engineering': 'Engineering',
+  'Biomedical Engineering': 'Engineering',
+  'Environmental Engineering': 'Engineering',
+  'Robotics': 'Engineering',
+  'Sustainable Energy': 'Engineering',
+  'Psychology': 'Psychology',
+  'Cognitive Science': 'Psychology',
+  'Medicine': 'Medicine',
+  'Nursing': 'Medicine',
+  'Public Health': 'Medicine',
+  'Biomedical Engineering': 'Medicine',
+  'Political Science': 'default',
+  'History': 'default',
+  'Philosophy': 'default',
+  'Linguistics': 'default',
+  'Journalism': 'default',
+  'Law': 'default',
+  'Architecture': 'default',
+  'Agricultural Science': 'default'
 }
 
 function generateResearchSuggestions(req, res) {
   const { majorDirection, personalBackground, hobbies, habits } = req.body
   
   if (!majorDirection) {
-    return res.status(400).json({ message: '请输入目标专业方向' })
+    return res.status(400).json({ message: '请选择目标专业方向' })
   }
   
-  const suggestions = researchData[majorDirection] || researchData['default']
+  const category = majorMapping[majorDirection] || 'default'
+  const suggestions = researchData[category] || researchData['default']
+  
+  let personalization = ''
+  if (personalBackground || hobbies || habits) {
+    const parts = []
+    if (personalBackground) parts.push(`Based on your background in ${personalBackground}`)
+    if (hobbies) parts.push(`your interest in ${hobbies}`)
+    if (habits) parts.push(`and your characteristic of ${habits}`)
+    personalization = ' ' + parts.join(', ') + ', this project aligns well with your profile.'
+  }
   
   const personalizedSuggestions = suggestions.map(s => ({
     ...s,
-    description: s.description + (personalBackground ? ` 结合您${personalBackground}的背景，此项目非常适合您。` : '')
+    description: s.description + personalization
   }))
   
   setTimeout(() => {
-    res.json({ suggestions: personalizedSuggestions })
+    res.json({ 
+      suggestions: personalizedSuggestions,
+      major: majorDirection
+    })
   }, 1000)
 }
 

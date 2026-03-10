@@ -5,12 +5,11 @@
     
     <div class="form-container">
       <div class="form-group">
-        <label>目标专业方向 *</label>
-        <input 
-          v-model="form.majorDirection" 
-          type="text" 
-          placeholder="例如：计算机科学、生物、经济学"
-        />
+        <label>Target Major *</label>
+        <select v-model="form.majorDirection">
+          <option value="" disabled>Select your target major</option>
+          <option v-for="major in majorList" :key="major" :value="major">{{ major }}</option>
+        </select>
       </div>
       
       <div class="form-group">
@@ -89,6 +88,53 @@ export default {
         hobbies: '',
         habits: ''
       },
+      majorList: [
+        'Accounting',
+        'Aerospace Engineering',
+        'Agricultural Science',
+        'Architecture',
+        'Artificial Intelligence',
+        'Biochemistry',
+        'Biology',
+        'Biomedical Engineering',
+        'Business Administration',
+        'Chemical Engineering',
+        'Chemistry',
+        'Civil Engineering',
+        'Cognitive Science',
+        'Computer Engineering',
+        'Computer Science',
+        'Data Science',
+        'Economics',
+        'Electrical Engineering',
+        'Environmental Engineering',
+        'Environmental Science',
+        'Finance',
+        'Genetics',
+        'Geology',
+        'History',
+        'Information Systems',
+        'Journalism',
+        'Law',
+        'Linguistics',
+        'Marketing',
+        'Materials Science',
+        'Mathematics',
+        'Mechanical Engineering',
+        'Medicine',
+        'Microbiology',
+        'Neuroscience',
+        'Nursing',
+        'Philosophy',
+        'Physics',
+        'Political Science',
+        'Psychology',
+        'Public Health',
+        'Robotics',
+        'Software Engineering',
+        'Statistics',
+        'Sustainable Energy'
+      ],
       loading: false,
       error: '',
       suggestions: []
@@ -96,8 +142,8 @@ export default {
   },
   methods: {
     async generateSuggestions() {
-      if (!this.form.majorDirection.trim()) {
-        this.error = '请输入目标专业方向'
+      if (!this.form.majorDirection) {
+        this.error = '请选择目标专业方向'
         return
       }
       
@@ -155,17 +201,20 @@ h1 {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
+  background: white;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   border-color: #667eea;
 }
 
