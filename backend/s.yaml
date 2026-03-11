@@ -1,0 +1,28 @@
+edition: 1.0.0
+name: ginkoo-backend
+services:
+  ginkoo:
+    component: fc
+    props:
+      region: cn-hangzhou
+      service:
+        name: ginkoo
+        description: Ginkoo Backend API
+      function:
+        name: api
+        runtime: nodejs18
+        codeUri: .
+        handler: index.handler
+        timeout: 60
+        memorySize: 1024
+        environmentVariables:
+          NODE_ENV: production
+      triggers:
+        - name: httpTrigger
+          type: http
+          config:
+            authType: anonymous
+            methods:
+              - GET
+              - POST
+            path: /.*
